@@ -27,7 +27,7 @@ if (dotenv.error) {
 
     const cloudantCreds = appEnv.services['cloudantNoSQLDB'][0].credentials;
     CLOUDANT_API = cloudantCreds.apikey;
-    CLOUDANT_URL = cloudantCreds.host;
+    CLOUDANT_URL = "https://" + cloudantCreds.host;
   }
   if (appEnv.services['natural-language-understanding']) {
     nluCreds = appEnv.services['natural-language-understanding'][0].credentials;
